@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 1
+    },
+    "externalId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "expectedVersion": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "brief": {
+      "type": "string",
+      "maxLength": 30000
+    },
+    "audience": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "style": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "aspectRatio": {
+      "type": "string",
+      "enum": [
+        "21:10",
+        "16:9",
+        "3:2",
+        "4:3",
+        "5:4",
+        "1:1",
+        "4:5",
+        "3:4",
+        "2:3",
+        "9:16"
+      ]
+    },
+    "isSpread": {
+      "type": "boolean"
+    },
+    "pageCount": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 24
+    },
+    "coverAssetId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "pages": {
+      "maxItems": 25,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 24
+          },
+          "caption": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "narration": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "imagePrompt": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "textInImage": {
+            "type": "boolean"
+          },
+          "imageAssetId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "audioAssetId": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "position"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "externalId",
+    "expectedVersion",
+    "title",
+    "style",
+    "pageCount",
+    "pages"
+  ],
+  "additionalProperties": false
+}

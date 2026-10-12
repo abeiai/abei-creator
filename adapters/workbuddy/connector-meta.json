@@ -1,0 +1,17 @@
+{
+  "name": "阿贝创作",
+  "name_zh": "阿贝创作",
+  "name_en": "Abei Creator",
+  "description": "创作并同步原创绘本和专辑，按用户任务投稿审核。",
+  "description_zh": "创作并同步原创绘本和专辑，按用户任务投稿审核。",
+  "description_en": "Create and sync original picture books and albums for review.",
+  "source": "abei-creator",
+  "type": "mcp",
+  "version": "0.1.0",
+  "minWorkbuddyVersion": "5.0.0",
+  "examples_zh": ["创作一本关于春天的绘本并保存草稿", "查看我同步过的专辑状态"],
+  "examples_en": [
+    "Create a picture book draft about spring",
+    "Check my synced album status"
+  ]
+}

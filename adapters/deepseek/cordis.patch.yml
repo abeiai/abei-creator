@@ -1,0 +1,3 @@
+- insert:
+    - id: abei-creator
+      name: '@abeiai/creator-deepseek'

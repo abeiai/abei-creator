@@ -1,0 +1,1 @@
+{"name":"abei-local","interface":{"displayName":"阿贝创作"},"plugins":[{"name":"abei-creator","source":{"source":"local","path":"./plugins/abei-creator"},"policy":{"installation":"AVAILABLE","authentication":"ON_INSTALL"},"category":"Productivity"}]}

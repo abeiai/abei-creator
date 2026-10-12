@@ -1,0 +1,17 @@
+{
+  "name": "@abeiai/creator-deepseek",
+  "version": "0.1.0",
+  "description": "阿贝原创绘本与专辑创作助手",
+  "type": "module",
+  "license": "MIT",
+  "main": "dist/deepseek.mjs",
+  "exports": {
+    ".": "./dist/deepseek.mjs",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
