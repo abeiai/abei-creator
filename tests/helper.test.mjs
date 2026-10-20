@@ -39,7 +39,7 @@ test("device restart, private credentials, refresh persisted before API, profile
       return response({
         device_code: "private-device",
         user_code: "PUBLIC",
-        verification_uri: "https://new.abeiai.com/creator/device",
+        verification_uri: "https://abeiai.com/creator/device",
         expires_in: 600,
         interval: 5,
       });
@@ -246,6 +246,7 @@ test("save retries preserve identity; 409 does not auto-update version or submit
       },
     });
     const one = await syncManifest(c, root, "book.json");
+    assert.equal(one.previewUrl, "https://abeiai.com/picture-books/book1/play");
     assert.equal(one.submitted, false);
     assert.equal(one.nextExpectedVersion, 1);
     await syncManifest(c, root, "book.json");

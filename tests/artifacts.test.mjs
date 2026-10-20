@@ -11,7 +11,7 @@ test("native standalone helper exists and runs without external Node", () => {
       env: { PATH: "/usr/bin:/bin" },
       encoding: "utf8",
     }).trim(),
-    "0.1.0",
+    "0.1.1",
   );
 });
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
@@ -62,7 +62,7 @@ test("standalone binary and bundled Node distribution speak real SDK stdio; Work
       }
     }
     const result = await workbuddyLocal(
-      resolve("release/abeiai-creator-0.1.0.tgz"),
+      resolve("release/abeiai-creator-0.1.1.tgz"),
       join(home, "config"),
     );
     const config = JSON.parse(await readFile(result.config, "utf8"));
@@ -83,7 +83,7 @@ test("release archives contain only public allowlisted files; Cowork has no root
   ]) {
     const entries = execFileSync(
       "unzip",
-      ["-Z1", `release/abei-creator-${name}-0.1.0.zip`],
+      ["-Z1", `release/abei-creator-${name}-0.1.1.zip`],
       { encoding: "utf8" },
     );
     assert.doesNotMatch(
@@ -94,7 +94,7 @@ test("release archives contain only public allowlisted files; Cowork has no root
   }
   const packageText = execFileSync(
     "unzip",
-    ["-p", "release/abei-creator-deepseek-0.1.0.zip", "package.json"],
+    ["-p", "release/abei-creator-deepseek-0.1.1.zip", "package.json"],
     { encoding: "utf8" },
   );
   assert.doesNotMatch(packageText, /workspace:/);

@@ -2,7 +2,7 @@ import { execFileSync } from "node:child_process";
 import { mkdir, cp, readFile, writeFile, readdir, rm } from "node:fs/promises";
 import { resolve, join } from "node:path";
 import { createHash } from "node:crypto";
-const version = "0.1.0",
+const version = "0.1.1",
   root = process.cwd(),
   release = resolve("release"),
   stage = join(release, "staging");

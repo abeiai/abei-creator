@@ -22,7 +22,7 @@ async function main() {
   const client = new CreatorClient({ profile, origin, allowLocalTest: local });
   const command = args.shift();
   if (command === "--version" || command === "version") {
-    process.stdout.write("0.1.0\n");
+    process.stdout.write("0.1.1\n");
     return;
   }
   if (command === "stdio") {
@@ -79,7 +79,7 @@ async function main() {
     result = await invokeTool(tool, JSON.parse(args[0] ?? "{}"));
   } else {
     process.stdout.write(
-      "abei-creator 0.1.0\n命令：stdio | auth login|poll|status|logout | describe FILE | upload FILE --external-id ID --kind IMAGE|AUDIO --mime MIME | sync MANIFEST --project DIR | transfer FILE --session-stdin | call TOOL JSON\n入口：--profile cli|codex-local|claude-desktop|claude-code|workbuddy|deepseek\n",
+      "abei-creator 0.1.1\n命令：stdio | auth login|poll|status|logout | describe FILE | upload FILE --external-id ID --kind IMAGE|AUDIO --mime MIME | sync MANIFEST --project DIR | transfer FILE --session-stdin | call TOOL JSON\n入口：--profile cli|codex-local|claude-desktop|claude-code|workbuddy|deepseek\n",
     );
     return;
   }

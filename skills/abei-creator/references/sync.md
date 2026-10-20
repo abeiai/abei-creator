@@ -1,6 +1,6 @@
 # 同步清单与命令
 
-清单schemaVersion为1；远程API和作品schema也为1；插件版本独立为0.1.0。具体字段参见安装包schemas/book.schema.json、album.schema.json、manifest.schema.json。
+清单schemaVersion为1；远程API和作品schema也为1；插件版本独立为0.1.1。具体字段参见安装包schemas/book.schema.json、album.schema.json、manifest.schema.json。
 
 绘本示例（正文4页，当前只保存未完成草稿）：
 

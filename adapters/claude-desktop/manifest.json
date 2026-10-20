@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "abei-creator",
   "display_name": "阿贝创作",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "通过本地素材创作、同步绘本与专辑，按用户任务投稿",
   "author": { "name": "Abei" },
   "license": "MIT",

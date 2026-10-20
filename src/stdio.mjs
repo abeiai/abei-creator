@@ -5,7 +5,7 @@ import { localTools, invokeTool } from "./tools.mjs";
 export async function serveStdio(client) {
   const server = new McpServer({
     name: `abei-creator-${client.profile}`,
-    version: "0.1.0",
+    version: "0.1.1",
   });
   for (const t of localTools(client))
     server.registerTool(

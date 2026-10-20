@@ -239,7 +239,7 @@ export async function syncManifest(client, projectRoot, manifestPath, signal) {
     result,
     nextExpectedVersion: result.version,
     previewUrl: result.previewHref
-      ? new URL(result.previewHref, "https://new.abeiai.com").href
+      ? new URL(result.previewHref, "https://abeiai.com").href
       : null,
     submitted: false,
   };
